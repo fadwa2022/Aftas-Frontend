@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Podium</title>
+</head>
+<body class="bg-gray-100 h-screen  items-center justify-center">
+  <div class="flex flex-col items-center">
+    <!-- Input Section -->
+    <div id="inputSection" class="mb-4 pt-24" >
+      <form  (ngSubmit)="showPodium()">
+      <label for="winnerName" class="block text-gray-700 text-sm font-bold mb-2">Competition:</label>
+      <select  [(ngModel)]="competitionCode" name="competitionCode" class="shadow appearance-none border rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+        <option *ngFor="let competition of filteredCompetitions"  [value]="competition.code" >{{competition.code}}</option>
+      </select>
+      <button type="submit" class="mt-2 m-5  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Afficher le podium</button>
+    </form></div>
+  </div>
+  <div  *ngIf="podiumVisibl" class="pb-12 flex flex-col items-center">
+
+
+    <!-- Hunting Podium -->
+      <div class="bg-green-500 text-white p-4 rounded-t-md  w-64 text-center">
+        <h2 class="text-lg font-bold">{{AllPodiums[0].member.familyName}}{{AllPodiums[0].member.name}}</h2>
+        <h3 class="text-lg font-medium">{{AllPodiums[0].member.identityNumber}}</h3>
+
+      </div>
+      <div class="bg-white p-4 border border-t-0 border-gray-300 w-64 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <div class="w-8 h-8 bg-yellow-500 text-white font-bold flex items-center justify-center rounded-full">1</div>
+          <div class="text-gray-700">Premier</div>
+        </div>
+        <!-- Ajoutez les informations du premier gagnant de la chasse ici -->
+      </div>
+
+
+    <!-- Fish Podium -->
+    <div class="bg-blue-500 text-white p-4 rounded-t-md mt-4 w-64 text-center">
+      <h2 class="text-lg font-bold">{{AllPodiums[1].member.familyName}}{{AllPodiums[1].member.name}}</h2>
+      <h3 class="text-lg font-medium">{{AllPodiums[1].member.identityNumber}}</h3>    </div>
+    <div class="bg-white p-4 border border-t-0 border-gray-300 w-64 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <div class="w-8 h-8 bg-yellow-500 text-white font-bold flex items-center justify-center rounded-full">2</div>
+        <div class="text-gray-700">Deuxième</div>
+      </div>
+      <!-- Ajoutez les informations du premier gagnant de la pêche ici -->
+    </div>
+
+
+    <!-- Competition Podium -->
+    <div class="bg-red-500 text-white p-4 rounded-t-md mt-4 w-64 text-center">
+      <h2 class="text-lg font-bold">{{AllPodiums[2].member.familyName}}{{AllPodiums[2].member.name}}</h2>
+      <h3 class="text-lg font-medium">{{AllPodiums[2].member.identityNumber}}</h3>    </div>
+    <div class="bg-white  p-4 border border-t-0 border-gray-300 w-64 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <div class="w-8 h-8 bg-yellow-500 text-white font-bold flex items-center justify-center rounded-full">3</div>
+        <div class="text-gray-700">Troisième</div>
+      </div>
+      <!-- Ajoutez les informations du premier gagnant de la compétition ici -->
+    </div>
+    <!-- Répétez le bloc ci-dessus pour le deuxième et le troisième gagnant -->
+  </div>
+
+</body>
+</html>

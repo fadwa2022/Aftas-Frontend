@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px; /* Ajustez la largeur de la barre latérale selon vos besoins */
+  background-color: #f0f0f0; /* Couleur de fond de la barre latérale */
+}

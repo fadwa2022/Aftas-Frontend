@@ -1,0 +1,17 @@
+/* styles.scss */
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px; /* Ajustez la largeur de la barre latérale selon vos besoins */
+  background-color: #f0f0f0; /* Couleur de fond de la barre latérale */
+}
+
+.content {
+  flex: 1;
+  padding: 20px; /* Ajustez le rembourrage du contenu principal selon vos besoins */
+}
+
+/* Ajoutez le style pour le reste de votre application ici */
