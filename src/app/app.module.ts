@@ -8,11 +8,13 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/components/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppHttpInterceptor } from './interceptors/app-http.interceptor';
+import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    NotAuthorizedComponent,
   ],
   imports: [
     BrowserModule,
