@@ -29,7 +29,11 @@ export class LoginComponent implements OnInit {
       next : data =>{
         this.authService.loadProfile(data);
       this.router.navigateByUrl("/dashboard")
-      },
+      if( this.authService.roles.includes("MEMBER")) this.router.navigateByUrl("/membersdashboard");
+      if(this.authService.roles.includes("JURY")) this.router.navigateByUrl("/jurydashboard");
+      if(this.authService.roles.includes("MANAGER")) this.router.navigateByUrl("/dashboard");
+
+    },
       error : err => {
           console.log(err)
     }

@@ -12,6 +12,8 @@ import { FormComponent } from './components/form/form.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { MembersComponent } from './components/members/members.component';
 import { PodiumComponent } from './components/podium/podium.component';
+import { MemberDashboardComponent } from './components/dashboard/member-dashboard/member-dashboard.component';
+import { JuryDashboardComponent } from './components/dashboard/jury-dashboard/jury-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PodiumComponent } from './components/podium/podium.component';
     FormComponent,
     PaginationComponent,
     MembersComponent,
-    PodiumComponent
+    PodiumComponent,
+    MemberDashboardComponent,
+    JuryDashboardComponent
   ],
   imports: [
     CommonModule,

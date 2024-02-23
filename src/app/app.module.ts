@@ -7,7 +7,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/components/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppHttpInterceptor } from './interceptors/app-http.interceptor';
+import { AppHttpInterceptor } from './login/interceptors/app-http.interceptor';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 
 @NgModule({

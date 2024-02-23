@@ -14,7 +14,6 @@ export class SideBarComponent {
 
   handelLogout() {
   this.authService.logout();
-  this.router.navigateByUrl("/login")
 }
 
 }
